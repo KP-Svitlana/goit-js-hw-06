@@ -1,3 +1,4 @@
+/* SETTINGS */
 .title {
   font-size: 18px;
 }
@@ -11,14 +12,21 @@
   text-decoration: none;
   cursor: pointer;
 }
+.comebackBtn {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: blue;
+  text-decoration: none;
+}
 
+/* TASK_3 */
 .gallery {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  /* justify-content: space-between; */
 }
 
 .gallery__img {
@@ -27,10 +35,16 @@
   height: 180px;
 }
 
-.comebackBtn {
-  display: block;
-  cursor: pointer;
-  margin-bottom: 20px;
-  color: blue;
-  text-decoration: none;
+/* TASK_6 */
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
 }
