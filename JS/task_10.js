@@ -23,13 +23,11 @@ function createBoxes(quantity) {
     box.style.height = getCalcSize(el);
     box.style.backgroundColor = `${getRandomHexColor()}`;
     boxes.append(box);
-    console.log(box);
   });
 }
 
 function destroyBoxes() {
   boxes.innerHTML = "";
-  console.log("Button was clicked");
 }
 
 function getRandomHexColor() {

@@ -21,6 +21,5 @@ const markup = images
       `<li class="gallery__item"><img class="gallery__img" src="${image.url}", alt="${image.alt}"/></li>`
   )
   .join("");
-console.log(markup);
 
 gallery.insertAdjacentHTML("afterbegin", markup);
