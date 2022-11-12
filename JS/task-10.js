@@ -30,12 +30,6 @@ function destroyBoxes() {
   boxes.innerHTML = "";
 }
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
-
 function getAmountArray(number) {
   const array = [];
 
@@ -48,4 +42,10 @@ function getAmountArray(number) {
 function getCalcSize(el) {
   const size = Number(el + "0") + 30;
   return `${size}px`;
+}
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
