@@ -1,8 +1,8 @@
 const form = document.querySelector(".login-form");
 
-form.addEventListener("submit", onCheckSubmit);
+form.addEventListener("submit", onCheckFormSubmit);
 
-function onCheckSubmit(event) {
+function onCheckFormSubmit(event) {
   event.preventDefault();
   const {
     elements: { email, password },
