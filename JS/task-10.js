@@ -4,26 +4,32 @@ const destroyButton = document.querySelector("[data-destroy]");
 const boxes = document.querySelector("#boxes");
 
 input.addEventListener("input", (event) => {
-  const amount = event.currentTarget.value;
+  let amount = event.currentTarget.value;
 
   createButton.addEventListener("click", (e) => {
     createBoxes(amount);
+    amount = 0;
+  });
+
+  destroyButton.addEventListener("click", (e) => {
+    destroyBoxes();
+    amount = 0;
+    input.value = "";
   });
 });
 
-destroyButton.addEventListener("click", (e) => {
-  destroyBoxes();
-});
-
 function createBoxes(quantity) {
+  const newBoxes = [];
+
   getAmountArray(quantity).forEach((el) => {
     const box = document.createElement("div");
     box.classList = `${el}`;
     box.style.width = getCalcSize(el);
     box.style.height = getCalcSize(el);
     box.style.backgroundColor = `${getRandomHexColor()}`;
-    boxes.append(box);
+    newBoxes.push(box);
   });
+  boxes.append(...newBoxes);
 }
 
 function destroyBoxes() {
